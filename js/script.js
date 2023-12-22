@@ -15,7 +15,11 @@ $(function () {
     // 너무빨리 사라지므로 조금 있다가 사라지게끔
     // setTimeout(동작, 시간)
     setTimeout(function () {
-      $target.fadeOut().remove();
+      $target.fadeOut();
+
+      setTimeout(function () {
+        $target.remove();
+      }, 1000);
     }, 1000);
   });
 });
